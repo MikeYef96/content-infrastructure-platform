@@ -1,0 +1,72 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+build/
+*.tsbuildinfo
+
+# environment
+.env
+.env.*
+!.env.example
+!**/.env.test
+
+# logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# test
+coverage/
+test-results/
+playwright-report/
+blob-report/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma (sqlite guard)
+apps/api/prisma/*.db
+apps/api/prisma/*.db-journal
+
+# Vite
+apps/web/.vite/
+
+# misc
+*.local
+
+# tooling cache
+.eslintcache
+
+# AI / local agent tooling
+.cursor/
+skills/
+prompts/
+
+AGENTS.md
+CLAUDE.md
+.cursorrules
+.cursorignore
+
+# Other AI assistant configs
+.codex/
+.continue/
+.aider*
+.windsurfrules
+.github/copilot-instructions.md
+
+# Local AI workflow docs
+docs/development/ai-workflow.md
+
+# Agent session artifacts
+agent-transcripts/
+**/agent-transcripts/

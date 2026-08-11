@@ -1,0 +1,1 @@
+-- Bootstrap migration: establishes Prisma migration history without domain tables.
