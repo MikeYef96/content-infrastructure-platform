@@ -1,0 +1,32 @@
+{
+  "name": "@content-platform/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "eslint src/",
+    "test": "echo \"No web tests yet\""
+  },
+  "dependencies": {
+    "@content-platform/api-client": "workspace:*",
+    "@content-platform/shared": "workspace:*",
+    "@tanstack/react-query": "^5.68.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@content-platform/config": "workspace:*",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
+  }
+}

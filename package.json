@@ -1,0 +1,32 @@
+{
+  "name": "content-infrastructure-platform",
+  "private": true,
+  "scripts": {
+    "predev": "pnpm --filter \"./packages/*\" build",
+    "dev": "pnpm --parallel -r dev",
+    "build": "pnpm --filter \"./packages/*\" build && pnpm -r --filter \"./apps/*\" build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,yml,yaml}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": ">=19.2.4",
+      "react-dom": ">=19.2.4"
+    }
+  }
+}
