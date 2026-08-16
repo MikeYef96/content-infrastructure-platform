@@ -1,6 +1,7 @@
 {
   "name": "content-infrastructure-platform",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "predev": "pnpm --filter \"./packages/*\" build",
     "dev": "pnpm --parallel -r dev",
