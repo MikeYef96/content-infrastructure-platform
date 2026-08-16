@@ -1,6 +1,7 @@
 # Current Plan
 
 ## Phase 0 — Foundation
+
 - [x] monorepo
 - [x] NestJS API
 - [x] React admin
@@ -11,14 +12,18 @@
 - [x] CI
 
 ## Phase 1 — Identity/Tenancy
+
 - [ ] auth
-- [ ] organizations
+- [x] organizations (Prisma model + migration scaffold)
 - [ ] members/roles
-- [ ] applications
-- [ ] environments
+- [x] applications (Prisma model + migration scaffold)
+- [x] environments (Prisma model + migration scaffold)
 - [ ] API keys
 
+Status: tenancy foundation is in progress; organization, application, and environment models are added and validated in Prisma, but auth, members, and API keys remain to be implemented.
+
 ## Phase 2 — Schema
+
 - [ ] content types
 - [ ] fields
 - [ ] validation rules
@@ -26,6 +31,7 @@
 - [ ] schema editor
 
 ## Phase 3 — Content
+
 - [ ] entries
 - [ ] drafts
 - [ ] structured payloads
@@ -33,12 +39,14 @@
 - [ ] media metadata
 
 ## Phase 4 — Versioning
+
 - [ ] immutable versions
 - [ ] history
 - [ ] diff
 - [ ] optimistic locking
 
 ## Phase 5 — Publishing
+
 - [ ] validation
 - [ ] publish
 - [ ] environment publication
@@ -46,6 +54,7 @@
 - [ ] audit trail
 
 ## Phase 6 — Delivery
+
 - [ ] REST API
 - [ ] API key auth
 - [ ] environment isolation
@@ -53,6 +62,7 @@
 - [ ] preview tokens
 
 ## Phase 7 — Differentiators
+
 - [ ] dependency graph
 - [ ] impact analysis
 - [ ] component registry
@@ -60,6 +70,7 @@
 - [ ] schema migration assistant
 
 ## Phase 8 — Reliability
+
 - [ ] webhooks
 - [ ] BullMQ
 - [ ] retries/backoff
@@ -68,6 +79,7 @@
 - [ ] WebSocket events
 
 ## Phase 9 — Portfolio
+
 - [ ] architecture diagram
 - [ ] demo dataset
 - [ ] multi-app demo
