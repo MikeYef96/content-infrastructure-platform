@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   quality:
     runs-on: ubuntu-latest
@@ -30,6 +33,8 @@ jobs:
       PORT: 3000
       DATABASE_URL: postgresql://postgres:postgres@localhost:5432/content_platform
       CORS_ORIGIN: http://localhost:5173
+      JWT_ACCESS_SECRET: ${{ secrets.JWT_ACCESS_SECRET }}
+      JWT_REFRESH_SECRET: ${{ secrets.JWT_REFRESH_SECRET }}
 
     steps:
       - uses: actions/checkout@v4
@@ -46,11 +51,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate Prisma schema
+        run: pnpm --filter @content-platform/api exec prisma validate
+
       - name: Build shared packages
         run: pnpm --filter "./packages/*" build
 
       - name: Generate Prisma client
         run: pnpm --filter @content-platform/api prisma:generate
+
+      - name: Audit dependencies
+        run: pnpm audit --prod --audit-level high
 
       - name: Apply database migrations
         run: pnpm --filter @content-platform/api prisma:migrate:deploy
