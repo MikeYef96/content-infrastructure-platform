@@ -1,4 +1,5 @@
-﻿-- This migration intentionally left blank: the initial Prisma migration already
--- created the domain schema, and this placeholder avoids re-running the same
--- migration on a clean database during CI/deploys.
+﻿-- This migration is intentionally a no-op. The initial migration already
+-- created the domain schema, so we keep the migration history consistent
+-- without re-running the same DDL in CI/deploy environments.
+SELECT 1;
 

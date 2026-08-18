@@ -28,7 +28,8 @@
   "pnpm": {
     "overrides": {
       "react": ">=19.2.4",
-      "react-dom": ">=19.2.4"
+      "react-dom": ">=19.2.4",
+      "deepmerge-ts": "^8.0.0"
     }
   }
 }
